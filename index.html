@@ -1,0 +1,2651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./icon.png">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <title>Handcrafted with Love </title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHQXJRT058"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KHQXJRT058');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+    (
+        function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start':
+            new Date().getTime(),
+            event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        }
+    )
+    (window,document,'script','dataLayer','GTM-TF7M6TX');
+    </script>
+    <!-- End Google Tag Manager -->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Source+Serif+Pro:wght@300;400;600&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            background: #ececee;
+        }
+
+        :root {
+            --heading-txt-color: #c1566c;
+            --main-bg-color: #d89a9e;
+            --white-color: #fff;
+            --black-color: #000;
+            --light-white-color: rgba(255, 255, 255, 0.8);
+            --light-black-color: rgba(0, 0, 0, 0.8);
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url("/BetterGrade-519DV.ttf");
+        }
+
+        @font-face {
+            font-family: mySecondFont;
+            src: url("/LucySaidOkPersonalUseItalic-OV9ee.ttf");
+        }
+
+        .letterContainer {
+            padding-bottom: 100px;
+
+        }
+
+        .row {
+            position: relative;
+        }
+
+        span.taxes {
+
+            position: absolute;
+            top: 54px;
+            right: 0;
+            font-size: small;
+
+        }
+
+        span.taxesGray {
+            color: #888;
+            position: absolute;
+            top: 54px;
+            right: 0;
+            font-size: small;
+
+        }
+
+        .navBarLetter {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: #c1566c;
+            opacity: 0;
+            transition: 500ms;
+            display: none;
+        }
+
+        #customerPassword {
+            display: none;
+        }
+
+        #loginFirst {
+            display: none;
+        }
+
+        #errLogin {
+            display: none;
+        }
+
+        #divMainDeliveryDiv {
+            display: none;
+        }
+
+        #modalContact {
+            display: none;
+        }
+
+        .navBarLetterActive {
+            opacity: 1;
+            background: #c1566c;
+        }
+
+        .letterNav {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .letterNav>span {
+            display: flex;
+            align-items: flex-end;
+            color: var(--white-color);
+        }
+
+        .letterNav>span>h1 {
+            font-weight: 400;
+            font-family: myFirstFont;
+            letter-spacing: 5px;
+        }
+
+        .letterNav>span>p {
+            font-size: 1.5em;
+            font-family: serif;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .letterNav>span>div,
+        .navTimer {
+            display: flex;
+            align-items: center;
+        }
+
+        .letterNav>span>div>p,
+        .navTimer>p {
+            font-family: "Poppins", serif;
+            color: #fff;
+        }
+
+        .reviews {
+            margin: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .letterNav>button {
+            border: none !important;
+            outline: none !important;
+            border-radius: 25px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-family: "Poppins", serif;
+            font-size: 1.2em;
+            background: #fff;
+            height: 40px;
+            box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+            color: var(--black-color);
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .expressLove {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+
+            background-image: url(/bgImg.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+
+        .decoLeft,
+        .pleasingeft,
+        .madeWitheft,
+        .homeDeleft {
+            box-shadow: 0 4px 9px 0 rgb(0 0 0 / 20%);
+            transition: 0.3s;
+            width: fit-content;
+        }
+
+
+        .decoLeft:hover,
+        .pleasingeft:hover,
+        .madeWitheft:hover,
+        .homeDeleft:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .expressLoveDivSub {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(233 229 229 / 40%)
+        }
+
+        .expressLoveDiv {
+            width: 80%;
+        }
+
+        .expressLoveDivTop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .expressLoveDivTop>h1 {
+            font-size: 6em;
+            color: var(--light-black-color);
+            letter-spacing: 0px;
+            font-family: mySecondFont;
+            font-weight: 400;
+            font-size: 8rem;
+        }
+
+        #h1Child2 {
+            font-size: 5em;
+            color: #c1566c;
+            letter-spacing: 5px;
+            border: none;
+        }
+
+        /* .header-img {
+            position: absolute;
+            opacity: 30%;
+            top: 40%;
+            right: 15%;
+        } */
+        .earlyBird {
+            font-size: 1.4em;
+        }
+
+        .expressLoveDivTop>p {
+            font-size: 2em;
+            font-weight: 400;
+            font-family: "Poppins", serif;
+        }
+
+        #pChild2 {
+            margin-top: 50px;
+        }
+
+        .beautifullyDecorated,
+        .pleasing,
+        .homeDel,
+        .madeWith {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .beautifullyDecoratedSub,
+        .pleasingSub,
+        .homeDelSub,
+        .madeWithSub {
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+        }
+
+
+        .decoRight,
+        .pleasingRight,
+        .homeDelRight,
+        .madeWithRight {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .decoRight>h1,
+        .homeDelRight>h1,
+        .pleasingRight>h1,
+        .madeWithRight>h1 {
+            font-size: 4em;
+            text-transform: capitalize;
+            color: var(--light-black-color);
+            font-family: myFirstFont;
+            font-weight: 300;
+        }
+
+        .perfectValentine {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .perfectValentine>span {
+            display: flex;
+            align-items: flex-end;
+            font-family: "Poppins", serif;
+        }
+
+        .perfectValentine>span>p {
+            font-size: 1.5em;
+            font-weight: 300;
+            letter-spacing: 0px;
+            font-size: 1em;
+
+            align-items: center;
+        }
+
+
+        span.smallSpan {
+            font-size: 3.5em;
+            font-family: mySecondFont;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        #Valentines {
+            color: #c1596d;
+        }
+
+        .loveLetterContent,
+        .foreverContent,
+        .goldChainContent {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 100px;
+            background: #ececee;
+        }
+
+        .loveLetterContentRight {
+            margin: 50px;
+        }
+
+        .loveLetterContentMain,
+        .foreverContentMain,
+        .goldChainContentMain {
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+
+            width: 80%;
+        }
+
+        .loveLetterContentRight>h1,
+        .foreverContentRight>h1,
+        .goldChainContentRight>h1 {
+            color: var(--light-black-color);
+            font-family: mySecondFont;
+            font-size: 3em;
+            font-weight: 400;
+        }
+
+        .loveLetterContentRight>h3,
+        .foreverContentRight>h3,
+        .goldChainContentRight>h3 {
+            margin-bottom: 30px;
+            font-family: myFirstFont;
+            font-weight: 300;
+            font-size: 2.5em;
+        }
+
+
+        .loveLetterContentRight>small {
+            font-size: 1em;
+            font-family: "Poppins", serif;
+            font-weight: 400;
+        }
+
+
+        #desktopDNone {
+            display: none;
+        }
+
+        .offerLetter {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .offersLetterSub {
+            width: 80%;
+        }
+
+        .col {
+            float: left;
+            width: 33.33%;
+        }
+
+        .offersLetterSub>div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            border: 2px solid lightgrey;
+        }
+
+        .offersLetterSub>div>h1 {
+            font-family: myFirstFont;
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-size: 2.5em;
+        }
+
+        .offersLetterSub>div>h2 {
+            font-family: "Poppins";
+            letter-spacing: 2px;
+            font-weight: 300;
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        .offersLetterSub>div>h2>span {
+            text-decoration: line-through;
+        }
+
+        .offersLetterSub>div>button {
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 1.2em;
+            font-weight: 700;
+            background: none;
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+            height: 40px;
+            width: 16rem;
+            cursor: pointer;
+        }
+
+        .offersLetterSub>small,
+        .foreverContentRight>small {
+            font-family: "Poppins", serif;
+            font-weight: 400;
+            font-size: 1em;
+            margin-top: 5px;
+        }
+
+
+
+        .deliveryDiv {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 100px;
+        }
+
+        .deliveryDivSub {
+            width: 60%;
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+
+
+        .pinCodeInput>input {
+            width: 100%;
+            border: none !important;
+            outline: none !important;
+            box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+            height: 60px;
+            padding-left: 15px;
+            font-family: "Poppins", sans-serif !important;
+            font-size: 1.8em;
+        }
+
+        .deliveryDivSubMain {
+            margin-top: 30px;
+        }
+
+        .deliveryDivSubMain>h3 {
+            font-size: 1.5em;
+            font-weight: 800;
+            font-family: mySecondFont;
+        }
+
+        .deliveryDivSubMain>h1 {
+            font-size: 2.5em;
+            font-weight: 800;
+            font-family: myFirstFont;
+            letter-spacing: 2px;
+        }
+
+        .divIcons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .divIcons>div {
+            display: flex;
+            align-items: center;
+        }
+
+        .divIcons>i {
+            font-size: 1.3em;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+            color: #000;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .divIcons>div>span {
+            border-bottom: 1px solid grey;
+        }
+
+        .deliveryParts {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .deliveryParts>div {
+            font-family: myFirstFont;
+        }
+
+        .deliveryParts>div>p,
+        .costAndReturn>div {
+            font-size: 1.5em;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .deliveryParts>div>h3 {
+            font-size: 3em;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+
+        .costAndReturn {
+            display: flex;
+            margin-top: 50px;
+            justify-content: space-between;
+        }
+
+        .costAndReturn>div {
+            font-family: myFirstFont;
+        }
+
+        .deliveryParts>div>i {
+            display: none;
+        }
+
+        @media screen and (max-width: 832px) {
+            .expressLoveDivTop>p {
+                font-size: 1.2em;
+
+            }
+
+            .decoLeft,
+            .pleasingeft,
+            .madeWitheft,
+            .homeDeleft {
+                box-shadow: 0 4px 9px 0 rgb(0 0 0 / 20%);
+                transition: 0.3s;
+                width: auto;
+                margin: 60px;
+            }
+
+            .offersLetterSub>div {
+                display: grid;
+
+                justify-content: center;
+
+            }
+
+            .col {
+                float: left;
+                width: auto;
+            }
+
+            .expressLove {
+                height: 100%;
+                width: 100%;
+            }
+
+            .expressLoveDivSub {
+                height: 100%;
+            }
+
+            .letterNav>span>div>p,
+            .navTimer>p {
+                font-size: 14px;
+            }
+
+            .navTimer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5px;
+            }
+
+
+
+
+
+
+
+
+
+            .deliveryDivSub {
+                width: 90%;
+            }
+
+            .deliveryParts>div>i {
+                display: flex;
+                margin-bottom: 10px;
+            }
+
+            .divIcons>div>span {
+                display: none;
+            }
+
+            .pinCodeInput>input {
+                height: 50px;
+                padding-left: 10px;
+                font-family: mySecondFont;
+                font-size: 1.5em;
+            }
+
+            .deliveryDivSubMain {
+                margin-top: 30px;
+            }
+
+            .deliveryDivSubMain>h3 {
+                font-size: 1em;
+                font-family: mySecondFont;
+            }
+
+            .deliveryDivSubMain>h1 {
+                font-size: 1em;
+                letter-spacing: 1px;
+            }
+
+            .pinCodeInput>input {
+                font-size: 1em;
+            }
+
+            .divIcons {
+                display: none;
+            }
+
+            .divIcons>div {
+                display: flex;
+                align-items: center;
+            }
+
+
+
+            .deliveryParts>div {
+                margin-top: 30px;
+                font-family: myFirstFont;
+            }
+
+            .deliveryParts>div>p {
+                font-size: 1.5em;
+                letter-spacing: 2px;
+            }
+
+            .costAndReturn>div>p {
+                font-size: 1em;
+                letter-spacing: 2px;
+            }
+
+            .costAndReturn>div>h1 {
+                font-size: 1.5em;
+            }
+
+            .deliveryParts>div>h3 {
+                font-size: 2.5em;
+                letter-spacing: 3px;
+            }
+
+
+
+            .pleasingeft>img,
+            .homeDeleft>img,
+            .decoLeft>img,
+            .madeWitheft>img {
+                width: 100%;
+
+            }
+
+            .pleasingeft,
+            .madeWitheft,
+            .goldChainContentRight {
+                order: -1;
+            }
+
+            #desktopDNone {
+                display: flex !important;
+                flex-direction: column;
+                text-align: center;
+                font-weight: 500;
+                letter-spacing: 1px;
+                color: #fff;
+            }
+
+            #desktopDNone>p {
+                display: flex;
+            }
+
+            #desktopDNone>p>span {
+                font-weight: 400;
+                font-family: myFirstFont !important;
+            }
+
+            .letterContainer {
+                padding-bottom: 100px;
+            }
+
+            .letterNav {
+
+
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .letterNav>span {
+                display: none;
+            }
+
+            .letterNav>span>h1 {
+                font-size: 18px;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+            }
+
+            .letterNav>button {
+
+                cursor: pointer;
+                font-size: 14px;
+                height: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .expressLove {
+                height: 60vh;
+                width: 100%;
+            }
+
+            .expressLoveDiv {
+                width: 90%;
+            }
+
+            .expressLoveDivTop>h1 {
+                font-size: 2.5em;
+                letter-spacing: 1px;
+                text-align: center;
+            }
+
+            #h1Child2 {
+                font-size: 2.5em;
+                letter-spacing: 1px;
+                text-align: center;
+            }
+
+            #pChild2 {
+                margin-top: 30px;
+            }
+
+            .beautifullyDecorated,
+            .pleasing,
+            .homeDel,
+            .madeWith {
+                width: 100%;
+            }
+
+            .beautifullyDecoratedSub,
+            .pleasingSub,
+            .homeDelSub,
+            .madeWithSub {
+                width: 100%;
+                grid-template-columns: repeat(1, 100%);
+            }
+
+            .decoRight>h1,
+            .homeDelRight>h1,
+            .pleasingRight>h1,
+            .madeWithRight>h1 {
+                font-size: 5em;
+            }
+
+            .perfectValentine {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .perfectValentine>span {
+                width: 90%;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .perfectValentine>span>p {
+                font-size: 1em;
+            }
+
+            .perfectValentine>span>h1 {
+                font-size: 2.5em;
+            }
+
+            .loveLetterContentMain,
+            .foreverContentMain,
+            .goldChainContentMain {
+                grid-template-columns: repeat(1, 100%);
+                width: 90%;
+            }
+
+
+
+            .MainImg1 {
+                width: 100%;
+            }
+
+            .goldChainMainImg1 {
+                width: 100%;
+            }
+
+            .goldChainMainImg2 {
+                width: 100%;
+            }
+
+            .goldChainMainImg3 {
+                width: 100%;
+            }
+
+            .goldChainMainImg4 {
+                width: 100%;
+            }
+
+            .foreverMainImg1 {
+                width: 100%;
+            }
+
+            .foreverMainImg2 {
+                width: 100%;
+            }
+
+            .foreverMainImg3 {
+                width: 100%;
+            }
+
+            .foreverMainImg4 {
+                width: 100%;
+            }
+
+            .MainImg2 {
+                width: 100%;
+            }
+
+            .MainImg3 {
+                width: 100%;
+            }
+
+            .MainImg4 {
+                width: 100%;
+            }
+
+            .mainImagsDiv,
+            .forevermainImagsDiv,
+            .goldChainmainImagsDiv {
+                grid-template-columns: repeat(3, 30%);
+                column-gap: 15px;
+                place-content: center;
+            }
+
+            #MainImg2 {
+                width: 100%;
+            }
+
+            #MainImg3 {
+                width: 100%;
+            }
+
+            #MainImg4 {
+                width: 100%;
+            }
+
+            #foreverMainImg2 {
+                width: 100%;
+            }
+
+            #foreverMainImg3 {
+                width: 100%;
+            }
+
+            #foreverMainImg4 {
+                width: 100%;
+            }
+
+            #goldChainMainImg2 {
+                width: 100%;
+            }
+
+            #goldChainMainImg3 {
+                width: 100%;
+            }
+
+            #goldChainMainImg4 {
+                width: 100%;
+            }
+
+
+
+        }
+
+
+
+
+        /* more css */
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .img-display {
+            overflow: hidden;
+        }
+
+        .img-showcase,
+        .img-showcase2 {
+            display: flex;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        .img-showcase img,
+        .img-showcase2 img {
+            min-width: 100%;
+            max-height: 50vh;
+        }
+
+        .img-select,
+        .img-select2 {
+            display: flex;
+        }
+
+        .img-item {
+            margin: 0.3rem;
+        }
+
+        .img-item:nth-child(1),
+        .img-item:nth-child(2),
+        .img-item:nth-child(3) {
+            margin-right: 0;
+        }
+
+        .img-item:hover {
+            opacity: 0.8;
+        }
+
+        .availNowButton {
+            text-decoration: none;
+            color: #000;
+        }
+
+
+
+        .footer-content {
+            background-color: #C1566C;
+            /* display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center; */
+        }
+
+        .footer-content h3 {
+            font-size: 2.1rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            line-height: 3rem;
+            color: white;
+        }
+
+        .ft-legal {
+            padding: 0.9375rem 1.875rem;
+            background-color: #C1566C;
+            color: white;
+        }
+
+        .ft-legal-list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            color: white;
+        }
+
+        .ft-legal-list ul {
+            list-style-type: none;
+        }
+
+        .ft-legal-list li {
+            margin: 0.125rem 0.625rem;
+            white-space: nowrap;
+            color: white;
+        }
+
+        /* one before the last child */
+        .ft-legal-list li:nth-last-child(2) {
+            flex: 1;
+            color: white;
+        }
+
+
+        /* modal */
+
+        /* The Modal (background) */
+        .modal,
+        .modalContactForm {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 999;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%;
+        }
+
+        /* The Close Button */
+        .close,
+        .closeContact {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus,
+        .closeContact:hover,
+        .closeContact:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .heading {
+            font-family: mySecondFont;
+            color: var(--heading-txt-color);
+            font-size: 3rem;
+            margin: 10px;
+        }
+
+        .heading-section .sub-heading {
+            font-family: mySecondFont;
+            color: var(--light-black-color);
+            font-size: 3rem;
+            margin: 10px;
+        }
+
+        .button-submit {
+            background-color: var(--heading-txt-color);
+            color: var(--light-white-color);
+            width: 100%;
+
+            margin: 10px 0px;
+            border-radius: 10px;
+            padding: 10px;
+            border: none;
+            font-size: 1.5rem;
+            /* font-family: myFirstFont; */
+        }
+
+        input.colored-txt {
+            border-color: var(--main-text-color);
+            width: 100%;
+            border-radius: 10px;
+
+            font-size: 2rem;
+            /* font-family: myFirstFont; */
+        }
+
+        input.colored-txt:focus,
+        textarea.colored-txt:focus {
+            outline: none !important;
+            border-color: var(--heading-txt-color);
+        }
+
+        ::placeholder,
+        label.colored-txt {
+            color: var(--main-text-color);
+            opacity: 1;
+            font-size: 1.5rem;
+            /* font-family: myFirstFont; */
+            /* Firefox */
+        }
+
+        :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: var(--main-text-color);
+        }
+
+        ::-ms-input-placeholder {
+            color: var(--main-text-color);
+            /* Microsoft Edge */
+        }
+
+        .button-submit {
+            background-color: var(--heading-txt-color);
+            color: var(--light-white-color);
+            width: 100%;
+
+            margin: 10px 0px;
+            border-radius: 10px;
+            padding: 10px;
+            border: none;
+            font-size: 1.5rem;
+            /* font-family: myFirstFont; */
+        }
+
+        @media screen and (max-width: 768px) {
+            .onlyMobile {
+                display: block;
+            }
+
+            .socials {
+
+                display: grid;
+
+            }
+
+            .heading {
+
+                font-size: 1.8rem;
+
+            }
+
+            ::placeholder,
+            label.colored-txt {
+
+                font-size: 1.2rem;
+
+            }
+
+
+            .button-submit {
+
+                padding: 5px;
+
+                font-size: 1.2rem;
+                /* font-family: myFirstFont; */
+            }
+
+            .loveLetterContentRight {
+                margin: 12px;
+            }
+        }
+
+        @media screen and (max-width: 603px) {
+
+
+            .modal-content {
+
+                width: auto;
+                margin: 20px;
+            }
+
+            .offersLetterSub>div>h1 {
+                font-size: 1.4em;
+            }
+        }
+
+        @media screen and (max-width: 525px) {
+
+
+            .heading {
+
+                font-size: 1.8rem;
+
+            }
+
+            ::placeholder,
+            label.colored-txt {
+
+                font-size: 0.8rem;
+
+            }
+
+
+            .button-submit {
+
+                padding: 5px;
+
+                font-size: 1.2rem;
+                /* font-family: myFirstFont; */
+            }
+        }
+
+
+
+        /* dropdown */
+
+        .deliveryDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+
+        }
+
+        .dropdown {
+            width: 100%;
+            margin: 0 20px;
+            padding: 20px;
+
+
+            font-family: "Lato", sans-serif;
+        }
+
+
+        .dropdown__switch:checked+.dropdown__options-filter .dropdown__select {
+            transform: scaleY(1);
+        }
+
+
+        .dropdown__switch:checked+.dropdown__options-filter #dropdown__filter:after {
+            transform: rotate(-135deg);
+        }
+
+        .dropdown__options-filter {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        #dropdown__filter {
+            position: relative;
+            display: flex;
+            padding: 20px;
+            color: #595959;
+            background-color: #fff;
+            border: 1px solid #d6d6d6;
+            border-radius: 30px;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        #dropdown__filter:hover {
+
+            background-color: rgb(224, 224, 224);
+
+        }
+
+        #dropdown__filter:focus {
+            border: #fff;
+            outline: none;
+
+        }
+
+        #dropdown__filter::after {
+            position: absolute;
+            top: 45%;
+            right: 20px;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-right: 2px solid #595959;
+            border-bottom: 2px solid #595959;
+            transform: rotate(45deg) translateX(-45%);
+            transition: 0.2s ease-in-out;
+        }
+
+        .dropdown__select {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            margin-top: 5px;
+            overflow: hidden;
+
+            transform: scaleY(0);
+            transform-origin: top;
+            font-weight: 300;
+            transition: 0.2s ease-in-out;
+        }
+
+        .dropdown__select-option {
+            padding: 20px;
+            background-color: #fff;
+            /* border-bottom: 1px solid #d6d6d6; */
+            transition: 0.3s;
+        }
+
+
+        #progressbar {
+            margin-bottom: 30px;
+            overflow: hidden;
+            color: #455A64;
+            padding-left: 0px;
+            margin-top: 30px
+        }
+
+        #progressbar li {
+            list-style-type: none;
+            font-size: 13px;
+            width: 33.33%;
+            float: left;
+            position: relative;
+            font-weight: 400;
+            color: #455A64 !important
+        }
+
+        #progressbar #step1:before {
+            content: "1";
+            color: #fff;
+            width: 29px;
+            margin-left: 15px !important;
+            padding-left: 11px !important
+        }
+
+        #progressbar #step2:before {
+            content: "2";
+            color: #fff;
+            width: 29px
+        }
+
+        #progressbar #step3:before {
+            content: "3";
+            color: #fff;
+            width: 29px;
+            margin-right: 15px !important;
+            padding-right: 11px !important
+        }
+
+        #progressbar li:before {
+            line-height: 29px;
+            display: block;
+            font-size: 12px;
+            background: #455A64;
+            border-radius: 50%;
+            margin: auto
+        }
+
+        #progressbar li:after {
+            content: '';
+            width: 121%;
+            height: 2px;
+            background: #455A64;
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 15px;
+            z-index: -1
+        }
+
+        #progressbar li:nth-child(2):after {
+            left: 50%
+        }
+
+        #progressbar li:nth-child(1):after {
+            left: 25%;
+            width: 121%
+        }
+
+        #progressbar li:nth-child(3):after {
+            left: 25% !important;
+            width: 50% !important
+        }
+
+        #progressbar li.active:before,
+        #progressbar li.active:after {
+            background: #4bb8a9
+        }
+
+        /* delivery */
+
+        @font-face {
+            font-family: myThirdFont;
+            src: url("../fonts/Graphik-Regular.ttf");
+        }
+
+        .deliveryDiv {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 100px;
+        }
+
+        .deliveryDivSub {
+            width: 40%;
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+
+        .divIcons>div>span {
+            width: 150px;
+        }
+
+        .pinCodeInput>input {
+            width: 100%;
+            border: none !important;
+            outline: none !important;
+            box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+            height: 60px;
+            padding-left: 15px;
+            font-family: "Poppins", sans-serif !important;
+            font-size: 1.8em;
+        }
+
+        .deliveryDivSubMain {
+            margin-top: 20px;
+            margin: 0 20px 0 20px;
+        }
+
+        .deliveryDivSubMain>h3 {
+            font-size: 1em;
+            border-bottom: 1px dotted #000;
+            font-weight: 400;
+            color: grey;
+            width: 140px;
+            font-family: myThirdFont;
+        }
+
+        .deliveryDivSubMain>h1 {
+            margin-top: 5px;
+            font-size: 1.5em;
+            color: rgba(0, 0, 0, 0.8);
+            font-weight: 500;
+            font-family: myThirdFont;
+            letter-spacing: 1px;
+        }
+
+        .divIcons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .divIcons>div {
+            display: flex;
+            align-items: center;
+        }
+
+        .divIcons>i {
+            font-size: 1.3em;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+            color: #000;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .divIcons>div>span {
+            border-bottom: 1px solid grey;
+        }
+
+        .deliveryParts {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .deliveryParts>div {
+            font-family: myFirstFont;
+        }
+
+        .deliveryParts>div>p,
+        .costAndReturn>div {
+            font-size: 1em;
+            font-weight: 700;
+            letter-spacing: 0px;
+            font-family: myThirdFont;
+            text-align: center;
+        }
+
+        .deliveryParts>div>h3 {
+            font-size: 0.9em;
+            margin-top: 5px;
+            font-weight: 600;
+            border-bottom: 1px dotted #000;
+            color: rgba(0, 0, 0, 0.8);
+            letter-spacing: 0px;
+            font-family: myThirdFont;
+        }
+
+        .deliveryParts>div:nth-child(3)>h3 {
+            width: 70px !important;
+        }
+
+        .costAndReturn>div>p {
+            font-weight: 500;
+            color: grey;
+        }
+
+        .costAndReturn>div>h1 {
+            margin-top: 25px;
+            font-weight: 300;
+            font-size: 1.8em;
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        .costAndReturn>div>small {
+            margin-top: 10px;
+            color: grey;
+        }
+
+        .costAndReturn {
+            display: flex;
+            margin-top: 50px;
+            justify-content: space-between;
+        }
+
+        .costAndReturn>div {
+            font-family: myThirdFont;
+        }
+
+        .deliveryParts>div>i {
+            display: none;
+        }
+
+        .Etsydiv {
+            margin-top: 20px;
+            background: lightgrey;
+            border-radius: 15px;
+        }
+
+        .Etsydiv>p {
+            font-size: 0.9em;
+            font-family: myThirdFont;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 10px;
+            line-height: 1.8;
+        }
+
+        #dropdown__filter {
+            margin-bottom: 40px;
+        }
+
+        .dropdown {
+            width: 40%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .dropdown {
+                width: 100% !important;
+            }
+
+            /* .deliveryDivSub {
+                width: 100%;
+            }
+
+            .deliveryParts>div>i {
+                display: flex;
+            }
+
+            .divIcons>div>span {
+                display: none;
+            }
+
+            .pinCodeInput>input {
+                height: 50px;
+                padding-left: 10px;
+                font-family: mySecondFont;
+                font-size: 1.5em;
+            }
+
+            .deliveryDivSubMain {
+                margin-top: 30px;
+            }
+
+            .deliveryDivSubMain>h3 {
+                font-size: 1em;
+                font-family: myThirdFont !important;
+            }
+
+            .deliveryDivSubMain>h1 {
+                font-size: 1em;
+                letter-spacing: 1px;
+                font-family: myThirdFont !important;
+            }
+
+            .pinCodeInput>input {
+                font-size: 1em;
+            }
+
+            .divIcons {
+                display: none !important;
+            }
+
+            .divIcons>div {
+                display: flex;
+                align-items: center;
+            }
+
+            .deliveryParts {
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-top: 0px;
+            }
+
+            .deliveryParts>div {
+                margin-top: 30px;
+                font-family: myThirdFont;
+            }
+
+            .deliveryParts>div>i {
+                position: relative;
+                top: 25px;
+                padding-left: 5px;
+            }
+
+            .deliveryParts>div>p {
+                margin-top: 0;
+                padding-top: 0;
+                font-size: 1em;
+                letter-spacing: 0px;
+                font-family: myThirdFont !important;
+            }
+
+            .costAndReturn {
+                flex-direction: column;
+            }
+
+            .costAndReturn>div {
+                margin-top: 30px;
+            }
+
+            .costAndReturn>div>p {
+                font-family: myThirdFont !important;
+                font-size: 0.8em;
+                letter-spacing: 1px;
+            }
+
+            .costAndReturn>div>h1 {
+                font-family: myThirdFont !important;
+                font-size: 1.5em;
+                margin-top: 5px;
+            }
+
+            .deliveryParts>div>h3 {
+                font-family: myThirdFont !important;
+                font-size: 1em;
+                letter-spacing: 0px;
+                text-align: center;
+                border-bottom: none;
+                font-weight: 400;
+            }
+
+            .deliveryParts>div:nth-child(3)>h3 {
+                width: 100% !important;
+            }
+
+            .pleasingeft>img,
+            .homeDeleft>img,
+            .decoLeft>img,
+            .madeWitheft>img {
+                width: 100%;
+                height: 300px;
+            }
+
+            .pleasingeft,
+            .madeWitheft,
+            .goldChainContentRight {
+                order: -1;
+            }
+
+            #desktopDNone {
+                display: flex !important;
+                flex-direction: column;
+                text-align: center;
+                font-weight: 500;
+                letter-spacing: 1px;
+                color: #fff;
+            }
+
+            #desktopDNone>p {
+                display: flex;
+            }
+
+            #desktopDNone>p>span {
+                font-weight: 400;
+                font-family: myFirstFont !important;
+            } */
+        }
+
+        /* contact us modal */
+        textarea#message {
+            width: 100%;
+            height: 10vh;
+            font-size: 2rem;
+        }
+
+
+        /* image galary */
+
+        .rowImage {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            -ms-flex: 25%;
+            /* IE10 */
+            flex: 25%;
+
+            max-width: 50%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+            .column {
+                -ms-flex: 50%;
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="letterContainer">
+        <div class="letterContainerDiv">
+            <div class="navBarLetter">
+                <div class="letterNav">
+                    <span>
+                        <p>Valentine’s</p>&nbsp;&nbsp;
+                        <h1>Early Bird Offer </h1>&nbsp;&nbsp;
+                        <p>ends in </p>&nbsp;&nbsp;
+                        <div class="navTimer">
+                            <p id="days"></p>&nbsp;<b>:</b>&nbsp;
+                            <p id="hours"></p>&nbsp;<b>:</b>&nbsp;
+                            <p id="mins"></p>&nbsp;<b>:</b>&nbsp;
+                            <p id="secs"></p>&nbsp;
+                            <h2 id="end"></h2>
+                        </div>
+
+                    </span>
+                    <h3 id='desktopDNone'>
+                        <p>
+                            Valentine’s &nbsp;<span>Early Bird Offer</span>&nbsp; ends in
+                        </p>
+
+                        <div class="navTimer">
+                            <p id="mobileDays"></p>&nbsp;<b>:</b>&nbsp;
+                            <p id="mobileHours"></p>&nbsp;<b>:</b>&nbsp;
+                            <p id="mobileMins"></p>&nbsp;<b>:</b>&nbsp;
+                            <p id="mobileSecs"></p>&nbsp;
+                            <h2 id="mobileEnd"></h2>
+                        </div>
+                    </h3>
+                    <button>
+                        <a href="#availOffer" class="availNowButton">
+                            Avail Now</a>
+                    </button>
+                </div>
+            </div>
+            <div class="expressLove">
+                <div class="expressLoveDivSub">
+                    <div class="expressLoveDiv">
+
+                        <div class="expressLoveDivTop">
+                            <p>Don’t be boring</p>
+                            <h1><i>Express your love in style</i></h1>
+                            <p id='pChild2'>with</p>
+                            <h1 id='h1Child2'><i>Handwritten letters</i></h1>
+                        </div>
+
+                    </div>
+                    <!-- <div class="header-img">
+                        <img src="./joanna-kosinska-ToV0rS9nTYs-unsplash.jpg" alt="header" />
+                    </div> -->
+                </div>
+            </div>
+            <div class="beautifullyDecorated">
+                <div class="beautifullyDecoratedSub">
+                    <div class="decoLeft">
+                        <img src="/deco.png" alt="decorated">
+                    </div>
+
+                    <div class="decoRight">
+                        <h1>Beautifully decorated</h1>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="pleasing">
+                <div class="pleasingSub">
+                    <div class="pleasingRight">
+                        <h1>Asthetically Pleasing</h1>
+                    </div>
+                    <div class="pleasingeft">
+                        <img src="/ple.png" alt="decorated">
+                    </div>
+                </div>
+            </div>
+
+            <div class="homeDel">
+                <div class="homeDelSub">
+                    <div class="homeDeleft">
+                        <img src="/homeDel.png" alt="decorated">
+                    </div>
+                    <div class="homeDelRight">
+                        <h1>Home Delivered</h1>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="madeWith">
+                <div class="madeWithSub">
+                    <div class="madeWithRight">
+                        <h1>Made with Love</h1>
+                    </div>
+                    <div class="madeWitheft">
+                        <img src="/madeWith.png" alt="decorated">
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="perfectValentine">
+                <span>
+                    <p>The perfect gifts for your loved ones&nbsp;&nbsp;
+
+                        <span class="onlyMobile"> <span class="smallSpan"><i>this</i></span>&nbsp;&nbsp;
+                            <span class="smallSpan" id='Valentines'><i>Valentines</i></span></span>
+                    </p>
+                </span>
+            </div>
+
+
+
+            <div class="loveLetterContent">
+                <div class="loveLetterContentMain">
+
+                    <!-- card left -->
+                    <div class="product-imgs">
+                        <div class="img-display">
+                            <div class="img-showcase">
+                                <img src="/M1.png" alt="product image">
+                                <img src="/M2.png" alt="product image">
+                                <img src="/M3.png" alt="product image">
+                                <img src="/MB3.png" alt="product image">
+                            </div>
+                        </div>
+                        <div class="img-select">
+                            <div class="img-item">
+                                <a href="#" data-id="1">
+                                    <img src="/M1.png" alt="product-image">
+                                </a>
+                            </div>
+                            <div class="img-item">
+                                <a href="#" data-id="2">
+                                    <img src="/M2.png" alt="product image">
+                                </a>
+                            </div>
+                            <div class="img-item">
+                                <a href="#" data-id="3">
+                                    <img src="/M3.png" alt="product image">
+                                </a>
+                            </div>
+                            <div class="img-item">
+                                <a href="#" data-id="4">
+                                    <img src="/MB3.png" alt="product image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loveLetterContentRight">
+                        <h1><i>Love Letter</i></h1>
+                        <h3>Handmade, Handcrafted, Calligraphed & Wax Sealed</h3>
+                        <small>
+                            A handwritten letter always makes an everlasting impression on the hearts of the receiver.
+                            It’s a memory that can be
+                            revisited by reading it again and again and felt by holding it in the hand, even after years
+                            and years, which can never
+                            be a case with an email or a message.
+                            But writing the exact words that someone is feeling, is not always that easy and yes the
+                            packaging does matter. A well
+                            drafted a handwritten letter on a high-quality paper in a beautiful handwriting always makes
+                            a better impression.
+                            We help you out in not just drafting a perfect letter, but also writing it for you and
+                            sending it across on your behalf
+                            because we believe beautifully handwritten words on paper get engraved in the heart.
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offerLetter" id="availOffer">
+                <div class="offersLetterSub">
+                    <small>
+                        <span class="earlyBird"> EARLY BIRD OFFER </span>ENDS IN <span id="dayEnd"
+                            class="earlyBird"></span> &nbsp;<span id="hrEnd" class="earlyBird"></span>&nbsp;<span
+                            id="minEnd" class="earlyBird"></span>&nbsp;<span id="secEnd" class="earlyBird"></span>
+
+
+
+                    </small>
+                    <div class="row">
+                        <h1 class="col">
+                            Early bird Offer
+                        </h1>
+                        <h2 class="col">
+                            <span>Rs1999</span>&nbsp;&nbsp;&nbsp;Rs799
+                        </h2>
+                        <button class="col" id="love-letter">
+                            Buy Now
+                        </button><span class="taxes">+taxes</span>
+                    </div>
+                    <small>Jan 15th - Feb 4th || Express Delivery</small>
+                    <div class="row">
+                        <h1 class="col">
+                            Standard Offer
+                        </h1>
+                        <h2 class="col">
+                            <span>Rs1999</span>&nbsp;&nbsp;&nbsp;Rs999
+                        </h2>
+                        <button class="col" disabled>
+                            Buy Now
+                        </button><span class="taxesGray">+taxes</span>
+                    </div>
+                    <small>Feb 5th - Feb9th || Express Delivery</small>
+                    <div class="row">
+                        <h1 class="col">
+                            Last minute Order
+                        </h1>
+                        <h2 class="col">
+                            <span>Rs1999</span>&nbsp;&nbsp;&nbsp;Rs1299
+                        </h2>
+                        <button class="col" disabled>
+                            Buy Now
+                        </button><span class="taxesGray">+taxes</span>
+                    </div>
+                    <small>We don’t like to rush through the creative process, each letter is handmade and calligraphed
+                        to your custom needs and it
+                        take our creative wizards 6-8 hours to create, decorate and pack one.</small>
+                </div>
+            </div>
+            <div class="foreverContent">
+                <div class="foreverContentMain">
+                    <div class="loveLetterContentRight">
+                        <h1><i>Forever in a Frame</i></h1>
+                        <h3>What’s better than a handwritten letter? One in a frame!</h3>
+                        <small>
+                            Gift the souvenir of your love in a frame. It’s a timeless, flexible, fully personalized
+                            choice, these frames can be your go-to gift this year. Not only the handcrafted letter a
+                            thoughtful gift option, but you also have the ability to make them personal as you’d like.
+                            These personalized frames will last for years to come.
+                            Framed personalized card is great because you know you are gifting a gift that will out-last
+                            this and many seasons to come. Long after the season is over, your gift will bring joy to
+                            your loved ones and remind them of your thoughtfulness.
+                            You get a personalized card framed in a high quality frame, beautifully wrapped sealed and
+                            packaged.
+                        </small>
+                    </div>
+                    <div class="product-imgs">
+                        <div class="img-display">
+                            <div class="img-showcase2">
+                                <img src="/frame1_1_1_794x794.png" alt="product image">
+                                <img src="/frame1_794x794.png" alt="product image">
+                                <img src="/frame1_3.png" alt="product image">
+                                <img src="/frame1_4.png" alt="product image">
+
+
+                            </div>
+                        </div>
+                        <div class="img-select2">
+                            <div class="img-item">
+                                <a href="#" data-id="1">
+                                    <img src="/frame1_1_1_794x794.png" alt="product image">
+                                </a>
+                            </div>
+                            <div class="img-item">
+                                <a href="#" data-id="2">
+                                    <img src="/frame1_794x794.png" alt="product image">
+                                </a>
+                            </div>
+                            <div class="img-item">
+                                <a href="#" data-id="3">
+                                    <img src="/frame1_3.png" alt="product image">
+                                </a>
+                            </div>
+                            <div class="img-item">
+                                <a href="#" data-id="4">
+                                    <img src="/frame1_4.png" alt="product image">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="offerLetter" id="availOffer">
+                <div class="offersLetterSub">
+
+                    <div class="row">
+                        <h1 class="col">
+                            Early bird Offer
+                        </h1>
+                        <h2 class="col">
+                            <span> Rs3999 </span>&nbsp;&nbsp;&nbsp; Rs1699
+                        </h2>
+                        <button class="col" disabled>
+                            Sold Out
+                        </button>
+                    </div>
+
+                    <div class="row">
+                        <h1 class="col">
+                            Standard Offer
+                        </h1>
+                        <h2 class="col">
+                            <span>Rs3999 </span>&nbsp;&nbsp;&nbsp;Rs1742
+                        </h2>
+                        <button class="col" id="forever-in-a-frame">
+                            Buy Now
+                        </button><span class="taxes">+taxes</span>
+                    </div>
+                    <small>Jan 15th - Feb 4th || Express Delivery</small>
+                    <div class="row">
+                        <h1 class="col">
+                            Last minute Order
+                        </h1>
+                        <h2 class="col">
+                            <span> Rs3999</span>&nbsp;&nbsp;&nbsp; Rs1999
+                        </h2>
+                        <button class="col" disabled>
+                            Buy Now
+                        </button><span class="taxesGray">+taxes</span>
+                    </div>
+                    <small>We don’t like to rush through the creative process, each letter is handmade and calligraphed
+                        to your custom needs and it
+                        take our creative wizards 6-8 hours to create, decorate and pack one.</small>
+                </div>
+            </div>
+
+            <div class="reviews">
+                <h1 class="heading"><i>Reviews</i></h1>
+                <!-- Photo Grid -->
+                <div class="rowImage">
+
+                    <div class="column">
+                        <img src="/Mask-1.png" style="width:100%">
+                        <img src="/Mask-4.png" style="width:100%">
+                        <img src="/Mask-2.png" style="width:100%">
+                        <img src="/Mask-3.png" style="width:100%">
+
+
+
+                    </div>
+                    <div class="column">
+                        <img src="/IMG_0155.png" style="width:100%">
+                        <img src="/Mask-6.png" style="width:100%">
+                        <img src="/Mask-5.png" style="width:100%">
+                        <img src="/Mask-7.png" style="width:100%">
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="deliveryDiv">
+                <div class="dropdown">
+                    <input type="checkbox" class="dropdown__switch" id="filter-switch" hidden />
+                    <label for="filter-switch" class="dropdown__options-filter">
+                        <div id="dropdown__filter" role="listbox" tabindex="-1">
+                            <div class="inputDelivery">
+                                <div class="dropdown__filter-selected" aria-selected="true">
+                                    Delivery and return
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div id="divMainDeliveryDiv">
+                            <div class="deliveryDivSubMain">
+                                <h3>Estimated Arrivals</h3>
+                                <h1 class="estimatedDelivery"></h1>
+                            </div>
+                            <div class="divIcons">
+                                <i class="far fa-hand-point-up"></i>
+                                <div>
+                                    <span>
+
+                                    </span>
+                                </div>
+                                <i class="fas fa-truck"></i>
+                                <div>
+                                    <span>
+
+                                    </span>
+                                </div>
+                                <i class="fas fa-gift"></i>
+
+                            </div>
+                            <div class="deliveryParts">
+                                <div>
+                                    <i class="far fa-hand-point-up"></i>
+                                    <p class="orderPlaced"></p>
+                                    <h3>Order Places</h3>
+                                </div>
+                                <div>
+                                    <i class="fas fa-truck"></i>
+                                    <p class="orderDispatch"></p>
+                                    <h3>Order Dispatch</h3>
+                                </div>
+                                <div>
+                                    <i class="fas fa-gift"></i>
+                                    <p class="estimatedDelivery"></p>
+                                    <h3>Delivered!</h3>
+                                </div>
+                            </div>
+                            <div class="costAndReturn">
+                                <div>
+                                    <p>Cost to Deliver</p>
+                                    <h1>Free</h1>
+                                </div>
+                                <div>
+                                    <p>Returns & exchanges</p>
+                                    <h1>Accepted</h1>
+                                    <small>Exception May Apply</small>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+
+                <span class="close">&times;</span>
+                <span id="errLogin">Your email or password is incorrect!</span>
+                <!-- <h6 class="heading"> Enter your email address</h6> -->
+                <form>
+
+                    <input type="text" class="colored-txt" id="customerEmail" name="email"
+                        placeholder="Enter Your email address."><br><br>
+
+                    <input type="password" class="colored-txt" id="customerPassword" name="password"
+                        placeholder="Your password.."><br><br>
+                    <input type="submit" value="Submit" id="proceedToPay" class="button-submit">
+                    <input type="submit" value="Login" id="loginFirst" class="button-submit">
+                </form>
+            </div>
+
+        </div>
+        <div id="modalContact" class="modalContactForm">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+
+                <span class="closeContact">&times;</span>
+
+                <h6 class="heading"> Contact Us</h6>
+                <form>
+
+                    <input type="text" class="colored-txt" id="contactName" name="name" placeholder="Name"><br><br>
+                    <input type="text" class="colored-txt" id="contactEmail" name="email" placeholder="Email"><br><br>
+
+                    <input type="number" class="colored-txt" id="contactPhone" name="phone"
+                        placeholder="Phone Number"><br><br>
+                    <textarea class="colored-txt" type="text" id="message" name="message"
+                        placeholder="Message"></textarea><br><br>
+                    <input type="submit" value="Submit" id="submitContact" class="button-submit">
+
+                </form>
+            </div>
+
+        </div>
+
+
+    </div>
+    <footer>
+        <section class="ft-legal">
+            <ul class="ft-legal-list">
+                <li id="contactUs">Contact Us</li>
+
+                <li>Built on Perform Digital &copy; 2022 </li>
+            </ul>
+        </section>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        let products = [];
+        let clickedProduct = null;
+        let base_url = "https://ww2.perform.digital"
+        const imgs = document.querySelectorAll('.img-select a');
+        const imgs2 = document.querySelectorAll('.img-select2 a');
+        const imgBtns = [...imgs];
+        const imgBtns2 = [...imgs2];
+        let imgId = 1;
+
+        imgBtns.forEach((imgItem) => {
+            imgItem.addEventListener('click', (event) => {
+                event.preventDefault();
+                imgId = imgItem.dataset.id;
+                slideImage();
+            });
+        });
+        imgBtns2.forEach((imgItem) => {
+            imgItem.addEventListener('click', (event) => {
+                event.preventDefault();
+                imgId = imgItem.dataset.id;
+                slideImage2();
+            });
+        });
+        function slideImage() {
+            const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+
+            document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+        }
+        function slideImage2() {
+            const displayWidth = document.querySelector('.img-showcase2 img:first-child').clientWidth;
+
+            document.querySelector('.img-showcase2').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+        }
+        window.addEventListener('resize', slideImage);
+
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                document.querySelector(".navBarLetter").classList.add("navBarLetterActive");
+                let target = document.querySelector(".navBarLetter")
+                target.style.display = "block";
+
+            }, 7000);
+        });
+
+        var countDownDate = new Date("2022-01-14T23:59:59").getTime();
+        var myfunc = setInterval(function () {
+            var now = new Date().getTime();
+            var timeleft = countDownDate - now;
+            var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+            document.getElementById("days").innerHTML = days + "d ";
+            document.getElementById("hours").innerHTML = hours + "h ";
+            document.getElementById("mins").innerHTML = minutes + "m ";
+            document.getElementById("secs").innerHTML = seconds + "s";
+            document.getElementById("mobileDays").innerHTML = days + "d ";
+            document.getElementById("mobileHours").innerHTML = hours + "h ";
+            document.getElementById("mobileMins").innerHTML = minutes + "m ";
+            document.getElementById("mobileSecs").innerHTML = seconds + "s";
+            document.getElementById("dayEnd").innerHTML = days + "days";
+            document.getElementById("hrEnd").innerHTML = hours + "hrs";
+            document.getElementById("minEnd").innerHTML = minutes + "mins";
+            document.getElementById("secEnd").innerHTML = seconds + "sec";
+            if (timeleft < 0) {
+                clearInterval(myfunc);
+                document.getElementById("days").innerHTML = "";
+                document.getElementById("hours").innerHTML = "";
+                document.getElementById("mins").innerHTML = "";
+                document.getElementById("secs").innerHTML = "";
+                document.getElementById("end").innerHTML = "TIME UP!!";
+                document.getElementById("mobileDays").innerHTML = "";
+                document.getElementById("mobileHours").innerHTML = "";
+                document.getElementById("mobileMins").innerHTML = "";
+                document.getElementById("mobileSecs").innerHTML = "";
+                document.getElementById("end").innerHTML = "TIME UP!!";
+            }
+        }, 1000);
+
+
+        document.getElementById('dropdown__filter').addEventListener('click', () => {
+
+            let element = document.getElementById('divMainDeliveryDiv')
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+
+
+        })
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+
+        var dateToday = new Date();
+        let monthToday = months[dateToday.getMonth()];
+
+        var duration1 = 4; //In Days
+        var duration2 = 6; //In Days
+
+        let fourDays = new Date();
+        fourDays.setDate(fourDays.getDate() + duration1)
+        let sixDays = new Date();
+
+        sixDays.setDate(sixDays.getDate() + duration2)
+        document.querySelector('.orderPlaced').innerHTML = `
+           ${dateToday.getDate()} ${monthToday}`
+        let eightDays = new Date()
+        eightDays.setDate(eightDays.getDate() + duration1 + 4)
+        let twelveDays = new Date()
+        twelveDays.setDate(twelveDays.getDate() + duration2 + 6)
+        document.querySelector('.orderDispatch').innerHTML = `
+           ${fourDays.getDate()}   ${months[fourDays.getMonth()]}-${sixDays.getDate()}  ${months[sixDays.getMonth()]}`
+        let estimatedDelivery = document.getElementsByClassName('estimatedDelivery');
+        [].slice.call(estimatedDelivery).forEach(function (div) {
+            div.innerHTML = `
+           ${eightDays.getDate()}   ${months[eightDays.getMonth()]}-${twelveDays.getDate()}  ${months[twelveDays.getMonth()]}`;
+        });
+
+        window.addEventListener("load", () => {
+            fetch(`${base_url}/store/products?productTypeId=21,22&storeName=handcrafted&country=IN`)
+                .then(response => response.json())
+                .then(data => {
+
+                    products = data.products;
+                });
+        });
+
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn1 = document.getElementById("love-letter");
+        var btn2 = document.getElementById("forever-in-a-frame");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        var span2 = document.getElementsByClassName("closeContact")[0];
+        // When the user clicks the button, open the modal
+        var accessToken = window.localStorage.getItem('accessToken');
+        btn1.onclick = function () {
+            clickedProduct = products.find(x => {
+                return x.name.split(' ').join('-').toLowerCase() === this.id;
+            });
+            if (!accessToken) {
+                modal.style.display = "block";
+            } else {
+                checkout()
+            }
+        }
+        btn2.onclick = function () {
+            clickedProduct = products.find(x => {
+                return x.name.split(' ').join('-').toLowerCase() === this.id;
+            });
+            if (!accessToken) {
+                modal.style.display = "block";
+            } else {
+                checkout()
+            }
+        }
+
+        // When the user clicks on < span > (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        span2.onclick = function () {
+            modalContact.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        var orderId = null;
+        var options;
+        var rzp1 = null;
+
+
+        document.getElementById("loginFirst").addEventListener("click", async function (e) {
+            e.preventDefault()
+            const LoginInput = {
+                email: document.getElementById("customerEmail").value,
+                password: document.getElementById("customerPassword").value,
+            };
+            const loginRes = await fetch(`${base_url}/users/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(LoginInput)
+            });
+            const data1 = await loginRes.json();
+
+            if (data1.accessToken) {
+                accessToken = data1.accessToken;
+                window.localStorage.setItem('accessToken', data1.accessToken);
+                checkout()
+                modal.style.display = "none";
+            } else {
+
+                let element = document.getElementById("errLogin")
+                element.style.display = "block";
+            }
+        })
+
+        document.getElementById("proceedToPay").addEventListener("click", async function (e) {
+
+            if (!accessToken) {
+                e.preventDefault()
+
+                // instant customer
+                const instantCustomerInput = {
+                    email: document.getElementById("customerEmail").value,
+                };
+                const instantCustomerRes = await fetch(`${base_url}/customers/instant`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(instantCustomerInput)
+                });
+                const data1 = await instantCustomerRes.json();
+                if (data1.accessToken) {
+                    accessToken = data1.accessToken;
+                    window.localStorage.setItem('accessToken', data1.accessToken);
+                    modal.style.display = "none";
+                    checkout()
+                } else {
+                    let element = document.getElementById("customerPassword")
+                    let buttonSubmit = document.getElementById("proceedToPay")
+                    let buttonLogin = document.getElementById("loginFirst")
+                    buttonLogin.style.display = "block"
+                    element.style.display = "block";
+                    buttonSubmit.style.display = "none"
+
+                }
+
+
+            }
+
+        });
+
+        async function checkout() {
+            // checkout
+            let checkoutInput = {
+                orderType: 1,
+                productTypeId: clickedProduct.productTypeId,
+                product: { productId: clickedProduct.id },
+                country: "IN",
+            };
+
+
+            const checkoutRes = await fetch(`${base_url}/checkout`, {
+                method: 'POST',
+                body: JSON.stringify(checkoutInput),
+                headers: {
+                    authorization: `Bearer ${accessToken}`,
+                    "Content-Type": "application/json",
+                }
+            });
+            const data2 = await checkoutRes.json();
+            if (data2.code === 401) {
+                modal.style.display = "block";
+                window.localStorage.clear()
+                accessToken = null
+            } else {
+                options = {
+                    "key": "rzp_live_6SG3tglgNTXWOS",
+                    "order_id": data2.orderId,
+                    "handler": async function (response) {
+                        if (
+                            response.razorpay_payment_id &&
+                            response.razorpay_order_id &&
+                            response.razorpay_signature
+                        ) {
+                            window.location.href = `https://handcrafted.store.perform.digital/success`;
+                        }
+
+                    },
+                };
+                var rzp1 = new Razorpay(options);
+                rzp1.on('payment.failed', function (response) {
+                    alert(response.error.code);
+                    alert(response.error.description);
+                    alert(response.error.source);
+                    alert(response.error.step);
+                    alert(response.error.reason);
+                    alert(response.error.metadata.order_id);
+                    alert(response.error.metadata.payment_id);
+                });
+                rzp1.open();
+            }
+        }
+
+
+
+        // contact us form
+        var modalContact = document.getElementById("modalContact");
+
+        document.getElementById("contactUs").addEventListener("click", async function () {
+
+            modalContact.style.display = "block";
+
+        })
+
+
+
+
+        document.getElementById("submitContact").addEventListener("click", async function (e) {
+
+            let dataToSubmit = {
+                formId: "form3",
+                formData: {
+                    name: $("#contactName").val(),
+                    email: $("#contactEmail").val(),
+
+                    phone: $("#contactPhone").val(),
+                    message: $("#message").val(),
+                },
+            };
+            let url = new URL(window.location.href).hostname
+
+            $.ajax({
+                url: `${base_url}/store-builder/forms?storeId=${encodeURIComponent(url)}`,
+                data: JSON.stringify(dataToSubmit),
+                method: "POST",
+                contentType: "application/json",
+                success: function (response) {
+                    console.log(response)
+                }
+            })
+        })
+    </script>
+
+
+    <!-- <script src="./firebaseScript.js"></script> -->
+    <!-- Google Tag Manager (noscript) -->
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2D278Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>

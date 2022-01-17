@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./icon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHQXJRT058"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KHQXJRT058');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (
+            function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            }
+        )
+        (window,document,'script','dataLayer','GTM-TF7M6TX');
+    </script>
+    <!-- End Google Tag Manager -->
+    <title>Handcrafted with Love </title>
+    <style>
+        :root {
+            --heading-txt-color: #C1566C;
+            --main-text-color: #d89a9e;
+
+            --white-color: #fff;
+
+            --black-color: #000;
+
+            --light-white-color: rgba(255, 255, 255, 0.8);
+
+            --light-black-color: rgba(0, 0, 0, 0.8);
+
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url("/BetterGrade-519DV.ttf")
+        }
+
+        @font-face {
+            font-family: mySecFont;
+            src: url("/LucySaidOkPersonalUseItalic-OV9ee.ttf");
+        }
+
+        #modalContact {
+            display: none;
+        }
+
+        #lovedOneDetails {
+            display: none;
+        }
+
+        #myDetails {
+            display: none;
+        }
+
+        .modalContactForm {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 999;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%;
+        }
+
+        .modal-sub-heading {
+
+            color: var(--light-black-color);
+            font-size: 1.3rem;
+            margin: 10px;
+        }
+
+        .close,
+        .closeContact {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+
+        .closeContact:hover {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .section_top {
+            width: 60vw;
+
+        }
+
+        .container .section_bottom {
+            width: 60vw;
+        }
+
+        .form-element {
+            display: flex;
+            width: 100%;
+        }
+
+        .form-element .form1,
+        .form-element .form3 {
+            width: 70%;
+            margin: 10px;
+        }
+
+        .form-element .form2 {
+            width: 30%;
+            margin: 10px;
+        }
+
+        .heading {
+            font-family: mySecFont;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: var(--heading-txt-color);
+            font-size: 4rem;
+            margin: 10px;
+        }
+
+        .heading-section .sub-heading {
+            font-family: mySecFont;
+            color: var(--light-black-color);
+            font-size: 3rem;
+            margin: 10px;
+        }
+
+        .button-submit {
+            background-color: var(--heading-txt-color);
+            color: var(--light-white-color);
+            width: 100%;
+            cursor: pointer;
+            margin: 10px 0px;
+            border-radius: 10px;
+            padding: 10px;
+            border: none;
+            font-size: 1.5rem;
+
+        }
+
+
+
+        input.colored-txt,
+        textarea.colored-txt {
+            border-color: var(--main-text-color);
+            width: 100%;
+            border-radius: 10px;
+
+            font-size: 2rem;
+        }
+
+        label.colored-txt-radio,
+        p.colored-txt-radio {
+            color: var(--main-text-color);
+            font-size: 1.5rem;
+        }
+
+        input.colored-txt:focus,
+        textarea.colored-txt:focus {
+            outline: none !important;
+            border-color: var(--heading-txt-color);
+
+        }
+
+
+
+        ::placeholder,
+
+        label.colored-txt {
+            color: var(--main-text-color);
+            opacity: 1;
+            font-size: 1.5rem;
+        }
+
+        :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: var(--main-text-color);
+        }
+
+        ::-ms-input-placeholder {
+            color: var(--main-text-color);
+            /* Microsoft Edge */
+        }
+
+        /* media query */
+        @media screen and (max-width: 1580px) {
+
+            .form-element {
+
+                display: grid;
+
+                width: 100%;
+            }
+
+            .form-element .form2 {
+                width: 100%;
+
+            }
+
+            .form-element .form1,
+            .form-element .form3 {
+                width: 100%;
+
+            }
+
+        }
+
+        @media screen and (max-width: 904px) {
+            .modal-content {
+                background-color: #fefefe;
+
+                padding: 20px;
+                border: 1px solid #888;
+                /* width: 30%; */
+                margin: 15px;
+            }
+
+            .card-box {
+
+                display: grid !important;
+
+            }
+
+            .heading-section .heading {
+
+                font-size: 3rem;
+
+            }
+
+            .heading-section .sub-heading {
+                font-family: mySecFont;
+                color: var(--light-black-color);
+                font-size: 2rem;
+                margin: 10px;
+            }
+
+            ::placeholder,
+
+            label.colored-txt {
+
+                font-size: 1.2rem;
+
+            }
+
+            input.colored-txt,
+            textarea.colored-txt {
+                font-size: 1.2rem;
+            }
+
+            label.colored-txt-radio,
+            p.colored-txt-radio {
+                font-size: 1.2rem;
+            }
+        }
+
+
+
+        /* card */
+
+        .card-box {
+            margin: 50px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border-radius: 5px;
+            /* 5px rounded corners */
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* Add some padding inside the card container */
+        .container {
+            padding: 2px 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 class="heading">Thank you for your purchase</h3>
+    <div class="card-box">
+
+
+        <div class="card" id="lovedOne">
+
+            <div class="container ">
+                <h4><b>Deliver it to my loved one</b></h4>
+
+            </div>
+        </div>
+        <div class="card" id="anonymously">
+
+            <div class="container ">
+                <h4><b>Deliver it to my loved one anonymously</b></h4>
+
+            </div>
+        </div>
+        <div class="card" id="toMeDeliver">
+
+            <div class="container">
+                <h4><b>Deliver it to me</b></h4>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        
+        <div class="section_top" id="lovedOneDetails">
+            <div class="heading-section">
+
+
+                <h4 class="sub-heading">Enter recipient details</h4>
+            </div>
+            <div class="form-element">
+
+                <div class="form1">
+
+                    <form>
+
+                        <input class="colored-txt" type="text" id="name" name="name"
+                            placeholder="loved one's name"><br><br>
+
+                        <input class="colored-txt" type="text" id="message" name="message"
+                            placeholder="message to be written"><br><br>
+                        <textarea class="colored-txt" type="text" id="address" name="address"
+                            placeholder="Delivery Address"></textarea>
+
+
+                </div>
+                <div class="form2">
+
+
+                    <input class="colored-txt" type="number" id="phone" name="phone"
+                        placeholder="phone +9199999999"><br>
+                    <p class="colored-txt-radio">Choose your delivery date:</p>
+
+                    <input type="radio" id="html" name="deliveryType" value="ValentinesDay">
+                    <label class="colored-txt-radio" for="html">Free:Valentines 14th feb 2022</label><br>
+                    <input class="colored-txt-radio" type="radio" id="css" name="deliveryType" value="when-ready">
+                    <label class="colored-txt-radio" for="css">Free:When ready (10-12 days)</label><br>
+                    <input class="colored-txt-radio" type="radio" id="javascript" name="deliveryType" value="express">
+                    <label class="colored-txt-radio" for="javascript">Express: Within 7 working days <br>Delivery charge
+                        Rs:334 Buy
+                        now</label><br> 
+
+
+                    <input type="submit" value="Submit" class="button-submit" id="toDetailForm">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="section_bottom" id="myDetails">
+            <div class="heading-section">
+                <h4 class="sub-heading">Enter Your details</h4>
+            </div>
+            <div class="form-element">
+                <div class="form3">
+                    <form id="form2">
+
+
+
+
+                        <input type="text" id="myName" name="name" placeholder="Your name" class="colored-txt"><br><br>
+
+                        <input type="text" id="myEmail" name="email" placeholder="Your Email"
+                            class="colored-txt"><br><br>
+                        <input type="number" id="myPhone" name="phone" placeholder="phone +9199999999"
+                            class="colored-txt"><br><br>
+                        <textarea class="colored-txt" type="text" id="myAddress" name="address"
+                            placeholder=" Address"></textarea><br><br>
+                        <input type="submit" value="Submit" class="button-submit" id="fromDetailForm">
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="modalContact" class="modalContactForm">
+
+            <!-- Modal content -->
+            <div class="heading-section modal-content">
+                <span class="close">&times;</span>
+                <h4 class="modal-sub-heading">Thank you! Your form was submitted successfully.</h4>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script>
+        var span2 = document.getElementsByClassName("close")[0];
+        span2.onclick = function () {
+            modalContact.style.display = "none";
+        }
+        var accessToken = window.localStorage.getItem('accessToken');
+        var formId
+        var form1 = document.getElementById("lovedOneDetails")
+        var form2 = document.getElementById("myDetails")
+        document.getElementById("lovedOne").addEventListener("click", async function (e) {
+            var type = document.getElementById("toDetailForm");
+            type.style.display = "none"
+            formId = "form1"
+            form1.style.display = "block"
+
+            form2.style.display = "block"
+        })
+
+        document.getElementById("anonymously").addEventListener("click", async function (e) {
+            var type = document.getElementById("toDetailForm");
+            type.style.display = "block"
+            formId = "form2"
+            form1.style.display = "block"
+            form2.style.display = "none"
+        })
+        document.getElementById("toMeDeliver").addEventListener("click", async function (e) {
+            formId = "form3"
+            form1.style.display = "none";
+            form2.style.display = "block"
+        })
+        document.getElementById("fromDetailForm").addEventListener("click", async function (e) {
+            e.preventDefault();
+            var type = document.getElementsByName("deliveryType");
+            var deliveryType;
+            for (var i = 0; i < type.length; i++) {
+                if (type[i].checked) {
+                    deliveryType = type[i].value;
+                }
+            }
+
+            let dataToSubmit = {
+                accessToken: accessToken,
+                formId: formId,
+                formData: {
+                    toName: $("#name").val(),
+                    toAddress: $("#address").val(),
+                    toMessage: $("#message").val(),
+                    toPhone: $("#phone").val(),
+                    fromName: $("#myName").val(),
+                    fromEmail: $("#myEmail").val(),
+                    fromAddress: $("#myAddress").val(),
+                    fromPhone: $("#myPhone").val(),
+                    deliveryType: deliveryType,
+                },
+            };
+            let url = new URL(window.location.href).hostname
+
+            $.ajax({
+                url: `https://ww2.perform.digital/store-builder/forms?storeId=${encodeURIComponent(url)}&staticPageId=success`,
+                data: JSON.stringify(dataToSubmit),
+                method: "POST",
+                contentType: "application/json",
+                success: function (response) {
+                    console.log(response)
+                    var modalContact = document.getElementById("modalContact");
+                    modalContact.style.display = "block";
+
+
+                }
+            })
+
+        });
+
+        document.getElementById("toDetailForm").addEventListener("click", async function (e) {
+            e.preventDefault();
+            var type = document.getElementsByName("deliveryType");
+            var deliveryType;
+            for (var i = 0; i < type.length; i++) {
+                if (type[i].checked) {
+                    deliveryType = type[i].value;
+                }
+            }
+
+            let dataToSubmit = {
+                accessToken: accessToken,
+                formId: formId,
+                formData: {
+                    toName: $("#name").val(),
+                    toAddress: $("#address").val(),
+                    toMessage: $("#message").val(),
+                    toPhone: $("#phone").val(),
+                    deliveryType: deliveryType,
+                },
+            };
+            let url = new URL(window.location.href).hostname
+
+            $.ajax({
+                url: `https://ww2.perform.digital/store-builder/forms?storeId=${encodeURIComponent(url)}&staticPageId=success`,
+                data: JSON.stringify(dataToSubmit),
+                method: "POST",
+                contentType: "application/json",
+                success: function (response) {
+                    var modalContact = document.getElementById("modalContact");
+                    modalContact.style.display = "block";
+
+                }
+            })
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
